@@ -6,5 +6,8 @@ It can achieve a behaviour which the user's single tap actions are recognized as
 
 ## Limitations
 
-1. The action must stop once at the boudaries before it can swipe to other pages. Beyond the stop, any successive horizontal swipe will be recognized as a swipe to other pages but not pan inside the page until the user cancels the swipe. If the successive action beyond the stop is a gesture zoom in or out while keeping the page at the boundaries, the next horizontal swipe is still recognized as a swip to other pages.
-2. If the user cancelled the swipe, there is a delay that the action can be re-recognized as panning the page instead of a horizontal swipe to change pages.
+1. The action must stop once at the page boundary before it can swipe to other pages. Beyond the stop, any successive horizontal swipe is recognized as a swipe to other pages but not a pan inside the page until the user cancels the swipe. If the successive action beyond the stop is a gesture zoom while keeping the page at the boundary, the next horizontal swipe is still recognized as a swipe to other pages.
+2. If the user cancelled the swipe, there is a 'deadlock' period that the action can be re-recognized as a pan inside the page instead of a horizontal swipe to other pages.
+
+## Demo
+https://user-images.githubusercontent.com/67048376/137888934-8c74a2b7-33e1-44cc-84c8-0178c357746f.mp4
